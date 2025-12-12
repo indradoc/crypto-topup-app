@@ -527,17 +527,14 @@ const adminAddressInput = document.getElementById("adminAddress");
   if (name) lines.push("Nama: " + name);
 
   if (nominal > 0) {
-    const labelNom =
-      mode === "topup"
-        ? "Nominal beli (IDR): "
-        : "Nominal cairkan (IDR): ";
-    lines.push(labelNom + formatIDR(nominal));
-    lines.push(
-      "Perkiraan terima asset (setelah potongan 4.000): " +
-        formatIDR(receive)
-    );
-  }
+    const labelNominal =
+        mode === "topup" ? "Nominal beli (IDR): " : "Nominal cairkan (IDR): ";
 
+    lines.push(labelNominal + formatIDR(nominal));
+
+    // Tambahan sesuai permintaan kamu
+    lines.push("Nilai belum termasuk Biaya / gas dan Admin (FEE)");
+}
   if (asset) lines.push("Asset yang dipilih: " + asset);
   if (wallet) lines.push("Alamat wallet: " + wallet);
   if (note) lines.push("Catatan: " + note);
