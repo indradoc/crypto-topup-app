@@ -12,19 +12,27 @@
   <div class="player-wrapper">
 
     <div class="video-container">
-
-      <video controls>
+      <video id="mainVideo" controls>
         <source src="video.mp4" type="video/mp4">
         Browser kamu tidak support video.
       </video>
-
     </div>
 
   </div>
-  <script src="<script src="https://pl28638953.effectivegatecpm.com/10/35/d9/1035d934d172c084942c25e8c9660ee2.js"></script>
 
-</body>
-</html>
+  <!-- Iklan akan muncul saat tombol Play ditekan -->
+  <script>
+    const video = document.getElementById("mainVideo");
+
+    video.addEventListener("play", function() {
+      if (!window.adLoaded) {
+        const s = document.createElement("script");
+        s.src = "https://pl28262011.effectivegatecpm.com/ef/db/a8/efdba8fb61e6abeb4da7625f9774ee21.js";
+        document.body.appendChild(s);
+        window.adLoaded = true;
+      }
+    });
+  </script>
 
 </body>
 </html>
