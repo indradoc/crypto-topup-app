@@ -6,7 +6,7 @@ html, body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Pusatkan semua ke tengah layar */
+/* Pusatkan ke tengah layar */
 .page {
   width: 100%;
   height: 100vh;
