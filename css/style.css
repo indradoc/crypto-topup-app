@@ -2,17 +2,12 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: #0a0a0a;
+  background: #0b0b0b;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* wrapper utama biar selalu di tengah layar */
-.player-wrapper {
+/* Pusatkan semua ke tengah layar */
+.page {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -20,20 +15,30 @@ body {
   justify-content: center;
 }
 
-/* area videonya */
-.video-container {
-  width: 80vw;          /* lebar mengikuti layar */
-  max-width: 1100px;    /* batas maksimal biar tidak terlalu besar */
-  aspect-ratio: 16 / 9; /* paksa jadi 16:9 */
-  background: black;
+/* Wrapper video + banner */
+.player-wrapper {
+  width: 100%;
+  max-width: 960px;
+  padding: 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-/* video itu sendiri */
+/* Player 16:9 */
 video {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* biar rapi dan tidak kepotong */
+  aspect-ratio: 16 / 9;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,.6);
+  object-fit: cover;
+}
+
+/* Banner di bawah video */
+.banner-728 {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
